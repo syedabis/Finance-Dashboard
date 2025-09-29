@@ -6,7 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 const Header = () => {
   return (
     <div className="flex items-center justify-between mb-6 sm:mb-8">
-      <h1 className="text-xl sm:text-2xl font-bold text-black">Dashboard</h1>
+      <h1 className="text-xl sm:text-2xl font-bold text-black">Finance Dashboard</h1>
       <div className="flex items-center gap-2 sm:gap-4">
         <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-200 rounded-full p-1.5 sm:p-2 flex items-center justify-center">
           <IoChatbubbleEllipsesOutline className="w-6 h-6 sm:w-8 sm:h-8 text-black" />

@@ -1,59 +1,76 @@
 import React from "react";
-import { MoreVertical } from "lucide-react";
+import { MoreVertical, FileText, CheckCircle, XCircle } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { ScrollArea } from "./ui/scroll-area";
 
-const Activity = () => {
+const ChequeActivity = () => {
   const todayActivities = [
     {
       id: 1,
-      name: "Jamie Smith",
-      action: "updated account settings",
-      time: "16:05"
+      name: "John Smith",
+      action: "issued cheque #12345 for $5,000",
+      time: "16:05",
+      icon: FileText,
+      color: "text-blue-500"
     },
     {
       id: 2,
-      name: "Alex Johnson",
-      action: "logged in",
-      time: "13:05"
+      name: "System",
+      action: "cheque #12340 returned due to insufficient funds",
+      time: "13:05",
+      icon: XCircle,
+      color: "text-red-500"
     },
     {
       id: 3,
-      name: "Morgan Lee",
-      action: "added a new savings goal for vacation",
-      time: "02:05"
+      name: "Bank",
+      action: "cheque #12335 cleared for $8,000",
+      time: "02:05",
+      icon: CheckCircle,
+      color: "text-lime-500"
     }
   ];
 
   const yesterdayActivities = [
     {
       id: 4,
-      name: "Taylor Green",
-      action: "reviewed recent transactions",
-      time: "21:05"
+      name: "John Smith",
+      action: "issued cheque #12298 for $3,500",
+      time: "21:05",
+      icon: FileText,
+      color: "text-blue-500"
     },
     {
       id: 5,
-      name: "Wilson Baptista",
-      action: "transferred funds to emergency fund",
-      time: "09:05"
+      name: "Bank",
+      action: "cheque #12295 cleared for $12,000",
+      time: "09:05",
+      icon: CheckCircle,
+      color: "text-lime-500"
     },
     {
       id: 6,
-      name: "Sarah Johnson",
-      action: "updated payment method",
-      time: "18:30"
+      name: "System",
+      action: "cheque #12290 returned - signature mismatch",
+      time: "18:30",
+      icon: XCircle,
+      color: "text-red-500"
     },
     {
       id: 7,
-      name: "Michael Chen",
-      action: "created new budget category",
-      time: "15:45"
+      name: "John Smith",
+      action: "issued cheque #12285 for $7,200",
+      time: "15:45",
+      icon: FileText,
+      color: "text-blue-500"
     },
     {
       id: 8,
-      name: "Emma Davis",
-      action: "set up automatic savings",
-      time: "12:20"
+      name: "Bank",
+      action: "cheque #12280 cleared for $4,500",
+      time: "12:20",
+      icon: CheckCircle,
+      color: "text-lime-500"
     }
   ];
 
@@ -65,30 +82,37 @@ const Activity = () => {
       </div>
 
       {/* Today Section */}
+      <ScrollArea className="h-[500px]">
       <div className="mb-3 sm:mb-4">
         <span className="text-xs sm:text-sm text-gray-600">Today</span>
       </div>
       <div className="relative mb-4 sm:mb-6">
         {/* Timeline line - stops before last item */}
-        <div className="absolute left-3 sm:left-4 top-0 w-px bg-gray-300" style={{ height: `${(todayActivities.length - 1) * 3.5}rem` }}></div>
+        <div className="absolute left-3 sm:left-4 top-0 w-px bg-gray-300" style={{ height: `${(todayActivities.length - 1) * 4}rem` }}></div>
         
         <div className="space-y-3 sm:space-y-4">
-          {todayActivities.map((activity, index) => (
-            <div key={activity.id} className="flex items-start gap-2 sm:gap-3 relative">
-              <div className="relative z-10">
-                <Avatar className="w-6 h-6 sm:w-8 sm:h-8">
-                  <AvatarImage src="https://github.com/shadcn.png" alt={activity.name} />
-                  <AvatarFallback>{activity.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                </Avatar>
+          {todayActivities.map((activity, index) => {
+            const IconComponent = activity.icon;
+            return (
+              <div key={activity.id} className="flex items-start gap-2 sm:gap-3 relative">
+                <div className="relative z-10">
+                  <Avatar className="w-6 h-6 sm:w-8 sm:h-8">
+                    <AvatarImage src="https://github.com/shadcn.png" alt={activity.name} />
+                    <AvatarFallback>{activity.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                  </Avatar>
+                </div>
+                <div className="flex-1">
+                  <p className="text-xs sm:text-sm text-black">
+                    <span className="font-semibold">{activity.name}</span> {activity.action}
+                  </p>
+                  <div className="flex items-center gap-2 mt-1">
+                    <IconComponent className={`w-3 h-3 ${activity.color}`} />
+                    <p className="text-xs text-gray-500">{activity.time}</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex-1">
-                <p className="text-xs sm:text-sm text-black">
-                  <span className="font-semibold">{activity.name}</span> {activity.action}
-                </p>
-                <p className="text-xs text-gray-500">{activity.time}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
@@ -98,29 +122,36 @@ const Activity = () => {
       </div>
       <div className="relative">
         {/* Timeline line - stops before last item */}
-        <div className="absolute left-3 sm:left-4 top-0 w-px bg-gray-300" style={{ height: `${(yesterdayActivities.length - 1) * 3.5}rem` }}></div>
+        <div className="absolute left-3 sm:left-4 top-0 w-px bg-gray-300" style={{ height: `${(yesterdayActivities.length - 1) * 4}rem` }}></div>
         
         <div className="space-y-3 sm:space-y-4">
-          {yesterdayActivities.map((activity, index) => (
-            <div key={activity.id} className="flex items-start gap-2 sm:gap-3 relative">
-              <div className="relative z-10">
-                <Avatar className="w-6 h-6 sm:w-8 sm:h-8">
-                  <AvatarImage src="https://github.com/shadcn.png" alt={activity.name} />
-                  <AvatarFallback>{activity.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                </Avatar>
+          {yesterdayActivities.map((activity, index) => {
+            const IconComponent = activity.icon;
+            return (
+              <div key={activity.id} className="flex items-start gap-2 sm:gap-3 relative">
+                <div className="relative z-10">
+                  <Avatar className="w-6 h-6 sm:w-8 sm:h-8">
+                    <AvatarImage src="https://github.com/shadcn.png" alt={activity.name} />
+                    <AvatarFallback>{activity.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                  </Avatar>
+                </div>
+                <div className="flex-1">
+                  <p className="text-xs sm:text-sm text-black">
+                    <span className="font-semibold">{activity.name}</span> {activity.action}
+                  </p>
+                  <div className="flex items-center gap-2 mt-1">
+                    <IconComponent className={`w-3 h-3 ${activity.color}`} />
+                    <p className="text-xs text-gray-500">{activity.time}</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex-1">
-                <p className="text-xs sm:text-sm text-black">
-                  <span className="font-semibold">{activity.name}</span> {activity.action}
-                </p>
-                <p className="text-xs text-gray-500">{activity.time}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
+      </ScrollArea>
     </div>
   );
 };
 
-export default Activity;
+export default ChequeActivity;
