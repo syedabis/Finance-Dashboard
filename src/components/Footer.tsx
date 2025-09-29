@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
             {/* Copyright */}
             <div className="text-sm font-semibold text-gray-900">
-              Copyright © 2025 DataCrumbs
+              Copyright © 2025 Gasco
             </div>
             
             {/* Navigation Links */}
