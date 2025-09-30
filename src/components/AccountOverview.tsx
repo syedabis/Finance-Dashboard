@@ -7,7 +7,7 @@ const AccountOverview = () => {
       <div className="flex justify-between items-start mb-4 sm:mb-6">
         <div className="rounded-lg flex items-center justify-center gap-2">
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarImage src="/images/boy.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <h3 className="text-base sm:text-lg font-medium">John Smith</h3>

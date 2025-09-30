@@ -1,8 +1,8 @@
 import React from "react";
 import { Bell } from "lucide-react";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import Image from "next/image";
+import { UserButton, SignUpButton, SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
 const Header = () => {
   return (
@@ -20,10 +20,28 @@ const Header = () => {
           </div>
         </div>
 
-        <Avatar className="w-8 h-8 sm:w-10 sm:h-10">
-            <AvatarImage className="w-8 h-8 sm:w-12 sm:h-12" src="/images/boy.png" />
-            <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
+        <SignedIn>
+          <UserButton 
+            afterSignOutUrl="/"
+            appearance={{
+              elements: {
+                userButtonAvatarBox: {
+                  width: "37px",
+                  height: "37px",
+                },
+              },
+            }}
+          />
+        </SignedIn>
+        <SignedOut>
+          <div className="flex items-center gap-2">
+            <SignUpButton mode="modal">
+              <button className="px-3 py-1.5 sm:px-4 sm:py-2 bg-lime-500 text-white text-xs sm:text-sm rounded-md hover:bg-lime-400 transition-colors">
+                Sign Up
+              </button>
+            </SignUpButton>
+          </div>
+        </SignedOut>
       </div>
     </div>
   );
