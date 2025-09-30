@@ -32,7 +32,7 @@ const ChequeActivity = () => {
       statusColor: "bg-yellow-500"
     },
     {
-      id: 2,
+      id: 4,
       status: "Cleared",
       amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
@@ -41,7 +41,7 @@ const ChequeActivity = () => {
       statusColor: "bg-green-500"
     },
     {
-      id: 3,
+      id: 5,
       status: "Returned (Signature Mismatch)",
       amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
@@ -53,7 +53,7 @@ const ChequeActivity = () => {
 
   const yesterdayActivities = [
     {
-      id: 4,
+      id: 6,
       status: "Cleared",
       amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
@@ -62,7 +62,7 @@ const ChequeActivity = () => {
       statusColor: "bg-green-500"
     },
     {
-      id: 5,
+      id: 7,
       status: "Cleared",
       amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
@@ -71,7 +71,7 @@ const ChequeActivity = () => {
       statusColor: "bg-green-500"
     },
     {
-      id: 6,
+      id: 8,
       status: "Returned (Signature Mismatch)",
       amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
@@ -80,7 +80,7 @@ const ChequeActivity = () => {
       statusColor: "bg-yellow-500"
     },
     {
-      id: 7,
+      id: 9,
       status: "Returned (Signature Mismatch)",
       amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
@@ -89,7 +89,7 @@ const ChequeActivity = () => {
       statusColor: "bg-yellow-500"
     },
     {
-      id: 6,
+      id: 10,
       status: "Returned (Signature Mismatch)",
       amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
@@ -98,7 +98,7 @@ const ChequeActivity = () => {
       statusColor: "bg-yellow-500"
     },
     {
-      id: 7,
+      id: 11,
       status: "Returned (Signature Mismatch)",
       amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
