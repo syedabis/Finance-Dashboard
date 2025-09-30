@@ -16,7 +16,7 @@ const ChequeStatusSummary = () => {
       name: "Issued Cheques",
       icon: FileText,
       count: 150,
-      amount: "$500,000",
+      amount: "Rs 500,000",
       percentage: 100,
       color: "bg-gray-500 text-white",
       isLast: false,
@@ -26,7 +26,7 @@ const ChequeStatusSummary = () => {
       name: "Cleared Cheques",
       icon: CheckCircle,
       count: 100,
-      amount: "$350,000",
+      amount: "Rs 350,000",
       percentage: 70,
       color: "bg-lime-500 text-white",
       isLast: false,
@@ -36,7 +36,7 @@ const ChequeStatusSummary = () => {
       name: "Returned Cheques",
       icon: XCircle,
       count: 10,
-      amount: "$20,000",
+      amount: "Rs 20,000",
       percentage: 7,
       color: "bg-red-500 text-white",
       isLast: false,
@@ -46,7 +46,7 @@ const ChequeStatusSummary = () => {
       name: "In Processing",
       icon: Clock,
       count: 40,
-      amount: "$130,000",
+      amount: "Rs 130,000",
       percentage: 26,
       color: "bg-yellow-500 text-black",
       isLast: true,
@@ -110,7 +110,7 @@ const ChequeStatusSummary = () => {
           <div className="absolute inset-0 flex flex-col items-center justify-center">
             <span className="text-xs text-gray-600">Total Value</span>
             <span className="text-sm sm:text-lg font-bold text-black">
-              $500,000
+              Rs 500,000
             </span>
           </div>
         </div>
@@ -134,6 +134,9 @@ const ChequeStatusSummary = () => {
                   <span className="text-xs sm:text-sm font-medium text-black">
                     {status.name}
                   </span>
+                  <span className="text-xs sm:text-sm font-medium text-black">
+                    ({status.count} cheques)
+                  </span>
                 </div>
                 <MoreVertical className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400" />
               </div>
@@ -144,14 +147,6 @@ const ChequeStatusSummary = () => {
                 />
               </div>
               <div className="flex justify-between items-center mb-1">
-                <div>
-                  <span className="text-xs sm:text-sm font-medium text-black">
-                    {status.count} cheques
-                  </span>
-                  <span className="text-xs sm:text-sm text-gray-600 ml-2">
-                    {status.percentage}%
-                  </span>
-                </div>
                 <span className="text-xs sm:text-sm text-gray-600">
                   {status.amount}
                 </span>

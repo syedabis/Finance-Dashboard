@@ -11,7 +11,7 @@ const AccountOverview = () => {
             <AvatarImage src="/images/boy.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <h3 className="text-base sm:text-lg font-medium">Abis Hussain</h3>
+          <h3 className="text-base sm:text-lg font-medium">Gasco</h3>
         </div>
         <LuNfc className="text-xl sm:text-3xl text-lime-400" />
       </div>
@@ -25,7 +25,7 @@ const AccountOverview = () => {
           </div>
           <div className="text-right">
             <p className="text-xs sm:text-sm text-gray-300">Value</p>
-            <p className="text-lg sm:text-xl font-bold">$500,000</p>
+            <p className="text-lg sm:text-xl font-bold">Rs 500,000</p>
           </div>
         </div>
 
@@ -33,7 +33,7 @@ const AccountOverview = () => {
         <div className="flex justify-between items-center">
           <div>
             <p className="text-xs sm:text-sm text-gray-300">Pending Amount</p>
-            <p className="text-lg sm:text-xl font-bold text-yellow-400">$130,000</p>
+            <p className="text-lg sm:text-xl font-bold text-yellow-400">Rs 130,000</p>
           </div>
           <div className="text-right">
             <p className="text-xs sm:text-sm text-gray-300">40 cheques</p>
@@ -44,7 +44,7 @@ const AccountOverview = () => {
         <div className="flex justify-between items-center">
           <div>
             <p className="text-xs sm:text-sm text-gray-300">Cleared Amount</p>
-            <p className="text-lg sm:text-xl font-bold text-lime-400">$350,000</p>
+            <p className="text-lg sm:text-xl font-bold text-lime-400">Rs 350,000</p>
           </div>
           <div className="text-right">
             <p className="text-xs sm:text-sm text-gray-300">100 cheques</p>

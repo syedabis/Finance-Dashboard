@@ -7,7 +7,7 @@ const ChequeActivity = () => {
     {
       id: 1,
       status: "Cleared",
-      amount: "$8,000",
+      amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
       payee: "Nuricon System",
       time: "2:04 AM",
@@ -16,7 +16,7 @@ const ChequeActivity = () => {
     {
       id: 2,
       status: "Cleared",
-      amount: "$8,000",
+      amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
       payee: "Liaquat Traders",
       time: "2:04 AM",
@@ -25,7 +25,7 @@ const ChequeActivity = () => {
     {
       id: 3,
       status: "Returned (Signature Mismatch)",
-      amount: "$8,000",
+      amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
       payee: "Liaquat Traders",
       time: "2:04 AM",
@@ -34,7 +34,7 @@ const ChequeActivity = () => {
     {
       id: 2,
       status: "Cleared",
-      amount: "$8,000",
+      amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
       payee: "Liaquat Traders",
       time: "2:04 AM",
@@ -43,7 +43,7 @@ const ChequeActivity = () => {
     {
       id: 3,
       status: "Returned (Signature Mismatch)",
-      amount: "$8,000",
+      amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
       payee: "Liaquat Traders",
       time: "2:04 AM",
@@ -55,7 +55,7 @@ const ChequeActivity = () => {
     {
       id: 4,
       status: "Cleared",
-      amount: "$8,000",
+      amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
       payee: "Nuricon System",
       time: "2:04 AM",
@@ -64,7 +64,7 @@ const ChequeActivity = () => {
     {
       id: 5,
       status: "Cleared",
-      amount: "$8,000",
+      amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
       payee: "Liaquat Traders",
       time: "2:04 AM",
@@ -73,7 +73,7 @@ const ChequeActivity = () => {
     {
       id: 6,
       status: "Returned (Signature Mismatch)",
-      amount: "$8,000",
+      amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
       payee: "Liaquat Traders",
       time: "2:04 AM",
@@ -82,7 +82,7 @@ const ChequeActivity = () => {
     {
       id: 7,
       status: "Returned (Signature Mismatch)",
-      amount: "$8,000",
+      amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
       payee: "Liaquat Traders",
       time: "2:04 AM",
@@ -91,7 +91,7 @@ const ChequeActivity = () => {
     {
       id: 6,
       status: "Returned (Signature Mismatch)",
-      amount: "$8,000",
+      amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
       payee: "Liaquat Traders",
       time: "2:04 AM",
@@ -100,7 +100,7 @@ const ChequeActivity = () => {
     {
       id: 7,
       status: "Returned (Signature Mismatch)",
-      amount: "$8,000",
+      amount: "Rs 8,000",
       chequeNumber: "Chq#12335",
       payee: "Liaquat Traders",
       time: "2:04 AM",

@@ -92,7 +92,7 @@ const KeyMetrics = () => {
                 tickLine={false}
                 axisLine={false}
                 tickMargin={8}
-                tickFormatter={(value) => `$${(value / 1000).toFixed(0)}K`}
+                tickFormatter={(value) => `Rs ${(value / 1000).toFixed(0)}K`}
               />
               <ChartTooltip
                 cursor={false}
@@ -140,7 +140,7 @@ const KeyMetrics = () => {
                 tickLine={false}
                 axisLine={false}
                 tickMargin={8}
-                tickFormatter={(value) => `$${(value / 1000).toFixed(0)}K`}
+                tickFormatter={(value) => `Rs ${(value / 1000).toFixed(0)}K`}
               />
               <ChartTooltip
                 cursor={false}
