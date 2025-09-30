@@ -2,10 +2,12 @@ import React from "react";
 import { Bell } from "lucide-react";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <div className="flex items-center justify-between mb-6 sm:mb-8">
+      <Image src="/images/gasco-logo.png" alt="Gasco" width={200} height={100} />
       <h1 className="text-xl sm:text-2xl font-bold text-black">Finance Dashboard</h1>
       <div className="flex items-center gap-2 sm:gap-4">
         <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-200 rounded-full p-1.5 sm:p-2 flex items-center justify-center">
@@ -19,7 +21,7 @@ const Header = () => {
         </div>
 
         <Avatar className="w-8 h-8 sm:w-10 sm:h-10">
-            <AvatarImage className="w-8 h-8 sm:w-12 sm:h-12" src="https://github.com/shadcn.png" />
+            <AvatarImage className="w-8 h-8 sm:w-12 sm:h-12" src="/images/boy.png" />
             <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </div>

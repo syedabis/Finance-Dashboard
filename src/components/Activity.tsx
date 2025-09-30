@@ -8,6 +8,7 @@ const ChequeActivity = () => {
     {
       id: 1,
       name: "John Smith",
+      image: "/images/boy.png",
       action: "issued cheque #12345 for $5,000",
       time: "16:05",
       icon: FileText,
@@ -16,6 +17,7 @@ const ChequeActivity = () => {
     {
       id: 2,
       name: "System",
+      image: "/images/girl.png",
       action: "cheque #12340 returned due to insufficient funds",
       time: "13:05",
       icon: XCircle,
@@ -24,6 +26,7 @@ const ChequeActivity = () => {
     {
       id: 3,
       name: "Bank",
+      image: "/images/boy.png",
       action: "cheque #12335 cleared for $8,000",
       time: "02:05",
       icon: CheckCircle,
@@ -35,6 +38,7 @@ const ChequeActivity = () => {
     {
       id: 4,
       name: "John Smith",
+      image: "/images/boy.png",
       action: "issued cheque #12298 for $3,500",
       time: "21:05",
       icon: FileText,
@@ -43,6 +47,7 @@ const ChequeActivity = () => {
     {
       id: 5,
       name: "Bank",
+      image: "/images/girl.png",
       action: "cheque #12295 cleared for $12,000",
       time: "09:05",
       icon: CheckCircle,
@@ -51,6 +56,7 @@ const ChequeActivity = () => {
     {
       id: 6,
       name: "System",
+      image: "/images/girl.png",
       action: "cheque #12290 returned - signature mismatch",
       time: "18:30",
       icon: XCircle,
@@ -59,6 +65,7 @@ const ChequeActivity = () => {
     {
       id: 7,
       name: "John Smith",
+      image: "/images/boy.png",
       action: "issued cheque #12285 for $7,200",
       time: "15:45",
       icon: FileText,
@@ -67,6 +74,7 @@ const ChequeActivity = () => {
     {
       id: 8,
       name: "Bank",
+      image: "/images/girl.png",
       action: "cheque #12280 cleared for $4,500",
       time: "12:20",
       icon: CheckCircle,
@@ -97,7 +105,7 @@ const ChequeActivity = () => {
               <div key={activity.id} className="flex items-start gap-2 sm:gap-3 relative">
                 <div className="relative z-10">
                   <Avatar className="w-6 h-6 sm:w-8 sm:h-8">
-                    <AvatarImage src="https://github.com/shadcn.png" alt={activity.name} />
+                    <AvatarImage src={activity.image} alt={activity.name} />
                     <AvatarFallback>{activity.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                   </Avatar>
                 </div>
@@ -131,7 +139,7 @@ const ChequeActivity = () => {
               <div key={activity.id} className="flex items-start gap-2 sm:gap-3 relative">
                 <div className="relative z-10">
                   <Avatar className="w-6 h-6 sm:w-8 sm:h-8">
-                    <AvatarImage src="https://github.com/shadcn.png" alt={activity.name} />
+                    <AvatarImage src={activity.image} alt={activity.name} />
                     <AvatarFallback>{activity.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                   </Avatar>
                 </div>

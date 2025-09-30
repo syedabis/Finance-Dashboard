@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Finance Dashboard",
+  title: "Gasco Finance Dashboard",
   description: "Modern financial dashboard for managing your finances",
 };
 
