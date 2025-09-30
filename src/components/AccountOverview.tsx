@@ -1,5 +1,6 @@
 import React from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { LuNfc } from "react-icons/lu";
 
 const AccountOverview = () => {
   return (
@@ -10,13 +11,9 @@ const AccountOverview = () => {
             <AvatarImage src="/images/boy.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <h3 className="text-base sm:text-lg font-medium">John Smith</h3>
+          <h3 className="text-base sm:text-lg font-medium">Abis Hussain</h3>
         </div>
-        <div className="flex space-x-1">
-          <div className="w-1 h-4 sm:h-6 bg-lime-400 rounded-full"></div>
-          <div className="w-1 h-4 sm:h-6 bg-lime-400 rounded-full"></div>
-          <div className="w-1 h-4 sm:h-6 bg-lime-400 rounded-full"></div>
-        </div>
+        <LuNfc className="text-xl sm:text-3xl text-lime-400" />
       </div>
 
       <div className="space-y-3 sm:space-y-4">

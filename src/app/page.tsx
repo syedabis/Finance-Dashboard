@@ -3,7 +3,7 @@ import AccountOverview from "@/components/AccountOverview";
 import Header from "@/components/Header";
 import Limit from "@/components/Limit";
 import ChequeStatusSummary from "@/components/ChequeStatusSummary";
-import Statistics from "@/components/ChequeStatistics";
+import KeyMetrics from "@/components/KeyMetrics";
 import ChequeActivity from "@/components/Activity";
 import Footer from "@/components/Footer";
 import { currentUser } from "@clerk/nextjs/server";
@@ -55,7 +55,7 @@ export default async function Dashboard() {
 
                 {/* Statistics Card */}
                 <div className="md:col-span-1 lg:col-span-4">
-                  <Statistics />
+                  <KeyMetrics />
                 </div>
 
                 {/* Recent Activity Card */}

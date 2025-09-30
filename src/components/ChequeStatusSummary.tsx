@@ -55,20 +55,68 @@ const ChequeStatusSummary = () => {
 
   return (
     <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-gray-200">
-      <div className="flex justify-between items-center mb-3 sm:mb-4">
-        <h3 className="text-xl sm:text-2xl font-semibold text-black">
-          Cheque Status
-        </h3>
-        <span className="text-xs sm:text-sm text-gray-500 cursor-pointer">
-          + Add Cheque
-        </span>
-      </div>
-      <div className="mb-4 sm:mb-6">
-        <p className="text-xs sm:text-sm text-gray-600 mb-1">Total Summary</p>
-        <p className="text-xl sm:text-2xl font-bold text-black">150 cheques</p>
+      <div className="flex justify-center mb-6 sm:mb-10 mt-3 sm:mt-4">
+        <div className="relative w-32 h-32 sm:w-48 sm:h-48">
+          {/* Donut Chart */}
+          <svg
+            className="w-32 h-32 sm:w-48 sm:h-48 transform -rotate-90"
+            viewBox="0 0 100 100"
+          >
+            {/* Background circle */}
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              fill="none"
+              stroke="#e5e7eb"
+              strokeWidth="12"
+            />
+            {/* Cleared segment (70%) */}
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              fill="none"
+              stroke="#a3e635"
+              strokeWidth="12"
+              strokeDasharray={`${2 * Math.PI * 40 * 0.7} ${2 * Math.PI * 40}`}
+              strokeLinecap="round"
+            />
+            {/* In Processing segment (26%) */}
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              fill="none"
+              stroke="#000000"
+              strokeWidth="12"
+              strokeDasharray={`${2 * Math.PI * 40 * 0.26} ${2 * Math.PI * 40}`}
+              strokeDashoffset={`-${2 * Math.PI * 40 * 0.7}`}
+              strokeLinecap="round"
+            />
+            {/* Returned segment (4%) */}
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              fill="none"
+              stroke="#6b7280"
+              strokeWidth="12"
+              strokeDasharray={`${2 * Math.PI * 40 * 0.04} ${2 * Math.PI * 40}`}
+              strokeDashoffset={`-${2 * Math.PI * 40 * 0.96}`}
+              strokeLinecap="round"
+            />
+          </svg>
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <span className="text-xs text-gray-600">Total Value</span>
+            <span className="text-sm sm:text-lg font-bold text-black">
+              $500,000
+            </span>
+          </div>
+        </div>
       </div>
 
-      <ScrollArea className="h-[415px]">
+      <ScrollArea className="h-[380px]">
         {chequeStatuses.map((status) => {
           const IconComponent = status.icon;
           return (
