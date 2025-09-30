@@ -11,7 +11,7 @@ import { SignedIn, SignedOut } from "@clerk/nextjs";
 
 export default async function Dashboard() {
   const user = await currentUser();
-  const userRole = (user?.publicMetadata as any)?.role;
+  const userRole = user?.publicMetadata?.role;
   const isAdmin = userRole === "admin";
 
   return (

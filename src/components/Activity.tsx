@@ -124,7 +124,7 @@ const ChequeActivity = () => {
         <div className="space-y-3 sm:space-y-4">
           {todayActivities.map((activity, index) => {
             return (
-              <div key={activity.id} className="flex items-start gap-2 sm:gap-3">
+              <div key={`${activity.id}-${index}`} className="flex items-start gap-2 sm:gap-3">
                 <div>
                   <div className={`w-6 h-6 rounded-full ${activity.statusColor}`}></div>
                 </div>
@@ -147,7 +147,7 @@ const ChequeActivity = () => {
         <div className="space-y-3 sm:space-y-4">
           {yesterdayActivities.map((activity, index) => {
             return (
-              <div key={activity.id} className="flex items-start gap-2 sm:gap-3">
+              <div key={`${activity.id}-${index}`} className="flex items-start gap-2 sm:gap-3">
                 <div>
                   <div className={`w-6 h-6 rounded-full ${activity.statusColor}`}></div>
                 </div>

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, ChangeEvent } from "react";
-import { Plus, ArrowUpDown, DollarSign, Clock, Wallet, Laptop } from "lucide-react";
+import { Plus, ArrowUpDown, DollarSign, Clock } from "lucide-react";
 import {
   Dialog,
   DialogContent,

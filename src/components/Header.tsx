@@ -2,7 +2,7 @@ import React from "react";
 import { Bell } from "lucide-react";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import Image from "next/image";
-import { UserButton, SignUpButton, SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
+import { UserButton, SignUpButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
 const Header = () => {
   return (

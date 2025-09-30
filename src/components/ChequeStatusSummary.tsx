@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from "react";
+import React from "react";
 import {
   MoreVertical,
   FileText,
@@ -61,9 +61,6 @@ const ChequeStatusSummary = () => {
     },
   } satisfies ChartConfig;
 
-  const totalValue = React.useMemo(() => {
-    return chartData.reduce((acc, curr) => acc + curr.count, 0);
-  }, []);
   const chequeStatuses = [
     {
       id: 1,
