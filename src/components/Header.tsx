@@ -11,12 +11,9 @@ const Header = () => {
       <h1 className="text-xl sm:text-2xl font-bold text-black">Finance Dashboard</h1>
       <div className="flex items-center gap-2 sm:gap-4">
         <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-200 rounded-full p-1.5 sm:p-2 flex items-center justify-center">
-          <IoChatbubbleEllipsesOutline className="w-6 h-6 sm:w-8 sm:h-8 text-black" />
-        </div>
-        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-200 rounded-full p-1.5 sm:p-2 flex items-center justify-center">
           <div className="relative">
             <Bell className="w-4 h-4 sm:w-6 sm:h-6 text-black" />
-            <div className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
+            <div className="absolute -top-1 -right-1 sm:-top-1 sm:right-0 w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full"></div>
           </div>
         </div>
 
