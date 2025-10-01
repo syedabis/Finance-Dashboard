@@ -35,7 +35,7 @@ const Limit = () => {
         
         <div className="mt-4">
           <div className="w-full bg-gray-200 rounded-full h-3">
-            <div className="bg-green-500 h-3 rounded-full" style={{ width: '12.5%' }}></div>
+            <div className="bg-lime-400 h-3 rounded-full" style={{ width: '12.5%' }}></div>
           </div>
         </div>
       </div>

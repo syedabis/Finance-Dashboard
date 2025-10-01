@@ -101,7 +101,7 @@ const KeyMetrics = () => {
               <Line
                 dataKey="revenue"
                 type="natural"
-                stroke="#10b981"
+                stroke="#a3e635"
                 strokeWidth={3}
                 dot={false}
               />
@@ -149,7 +149,7 @@ const KeyMetrics = () => {
               <Line
                 dataKey="expenses"
                 type="natural"
-                stroke="#ef4444"
+                stroke="#000000"
                 strokeWidth={3}
                 dot={false}
               />
